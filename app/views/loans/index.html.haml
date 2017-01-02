@@ -1,0 +1,18 @@
+%h1 My book loans
+
+%table#loans
+  %thead
+    %tr
+      %th Title
+      %th Start date
+      %th Due date
+      %th Times Extended
+      %th Action
+  %tbody
+    - @loans.each do |loan|
+      %tr
+        %td= loan.title
+        %td= loan.start_date
+        %td= loan.due_date
+        %td= loan.times_extended
+        %td= Extend
