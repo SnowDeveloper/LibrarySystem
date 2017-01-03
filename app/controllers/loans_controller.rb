@@ -1,7 +1,7 @@
 class LoansController < ApplicationController
 
   def index
-    @loans = []
+    @loans = Loan.all
     render 'index'
   end
 
