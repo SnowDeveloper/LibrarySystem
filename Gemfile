@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'haml' # Select HAML templates
 gem 'haml-rails'
+gem 'rspec-collection_matchers'
+gem 'rails-controller-testing'
 
 
 group :development, :test do
@@ -44,6 +46,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :test do
@@ -51,10 +54,9 @@ group :test do
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'capybara'
-  gem 'faker'
   gem 'launchy'
+  gem 'simplecov', :require => false
 end
-
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
