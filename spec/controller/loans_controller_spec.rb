@@ -9,4 +9,12 @@ RSpec.describe LoansController, type: :controller do
     end
   end
 
+  context 'GET loans/extends' do
+    it 'returns response success' do
+      get :extends,:data => {:id => 3}
+      expect(response).to have_http_status(302)
+    end
+
+  end
+
 end

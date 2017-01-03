@@ -1,5 +1,3 @@
-%h1 My book loans
-
 %table#loans
   %thead
     %tr
@@ -15,4 +13,4 @@
         %td= loan.start_date
         %td= loan.return_date
         %td= loan.loan_extention_reqs.count
-        %td Extend
+        %td= link_to 'Extend', action: 'extends', id: loan

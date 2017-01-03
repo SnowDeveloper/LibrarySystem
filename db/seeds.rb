@@ -14,7 +14,7 @@ more_loans = [{start_date: '09-01-2016', return_date: '23-01-2016', cost: 1.5},
               {start_date: '04-01-2016', return_date: '16-01-2016', cost: 2.5}]
 
 more_loans.each do |loan|
-  new_loan = Loan.new({:start_date => loan[:start_date], :return_date => loan[:return_date]})
+  new_loan = Loan.new({start_date: loan[:start_date], return_date: loan[:return_date], cost: loan[:cost]})
   new_loan.user = more_users.last
   new_loan.book = Book.create(more_books.pop)
   new_loan.save!
