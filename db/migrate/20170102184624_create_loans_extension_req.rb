@@ -1,4 +1,4 @@
-class CreateLoanExtensionReq < ActiveRecord::Migration[5.0]
+class CreateLoansExtensionReq < ActiveRecord::Migration[5.0]
   def change
     create_table :loan_extension_reqs do |t|
       t.date 'return_date'
