@@ -21,7 +21,13 @@ class LoansController < ApplicationController
 
   def extends
     id = params[:id]
-    flash[:notice] = 'Extension accepted'
+    @loan = Loan.find(id)
+    if @loan.can_be_extended(7)
+      @loan.extend_by 7
+      flash[:notice] = 'Extension accepted'
+    else
+      flash[:notice] = 'Extension rejected'
+    end
     redirect_to loans_path
   end
 
